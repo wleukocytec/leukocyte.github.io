@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="day -? 貌似混进了 Nu1L，非常地高兴，非常的激动，感谢 hash_hash！好像还有机会线下参加今年 defcon quals，赢麻了！ 和北京的高中同学们说了一声，有机会参观 tp 了！ day 0 五月三日，乡下人进京了，首都机场线很舒服啊。下午 check in 了 n1 订的豪华酒店，休息了一下去清华玩了，在清华和 xql 打牌，被打爆了，怎么回事呢，我要和世上的 xql 爆了！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="defcon quals 2023 游记">
+<meta property="og:url" content="http://example.com/2024/05/15/defcon-quals-2023-%E6%B8%B8%E8%AE%B0/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="day -? 貌似混进了 Nu1L，非常地高兴，非常的激动，感谢 hash_hash！好像还有机会线下参加今年 defcon quals，赢麻了！ 和北京的高中同学们说了一声，有机会参观 tp 了！ day 0 五月三日，乡下人进京了，首都机场线很舒服啊。下午 check in 了 n1 订的豪华酒店，休息了一下去清华玩了，在清华和 xql 打牌，被打爆了，怎么回事呢，我要和世上的 xql 爆了！">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-15T12:22:47.000Z">
+<meta property="article:modified_time" content="2024-05-16T03:16:07.516Z">
+<meta property="article:author" content="leukocyte">
+<meta property="article:tag" content="CTF">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2024/05/15/defcon-quals-2023-%E6%B8%B8%E8%AE%B0/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2024/05/15/defcon-quals-2023-%E6%B8%B8%E8%AE%B0/","path":"2024/05/15/defcon-quals-2023-游记/","title":"defcon quals 2023 游记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>defcon quals 2023 游记 | BLOG</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">BLOG</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Become Less Of Grand</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#day--"><span class="nav-number">1.</span> <span class="nav-text">day -?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-0"><span class="nav-number">2.</span> <span class="nav-text">day 0</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-1"><span class="nav-number">3.</span> <span class="nav-text">day 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-2"><span class="nav-number">4.</span> <span class="nav-text">day 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#day-3"><span class="nav-number">5.</span> <span class="nav-text">day 3</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">leukocyte</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/15/defcon-quals-2023-%E6%B8%B8%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="leukocyte">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BLOG">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="defcon quals 2023 游记 | BLOG">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          defcon quals 2023 游记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2024-05-15 20:22:47" itemprop="dateCreated datePublished" datetime="2024-05-15T20:22:47+08:00">2024-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2024-05-16 11:16:07" itemprop="dateModified" datetime="2024-05-16T11:16:07+08:00">2024-05-16</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="day--">day -?</h3>
+<p>貌似混进了 Nu1L，非常地高兴，非常的激动，感谢
+hash_hash！好像还有机会线下参加今年 defcon quals，赢麻了！</p>
+<p>和北京的高中同学们说了一声，有机会参观 tp 了！</p>
+<h3 id="day-0">day 0</h3>
+<p>五月三日，乡下人进京了，首都机场线很舒服啊。下午 check in 了 n1
+订的豪华酒店，休息了一下去清华玩了，在清华和 xql
+打牌，被打爆了，怎么回事呢，<strong>我要和世上的 xql 爆了！</strong></p>
+<p>清华环境还是好的，有个湖，有个湖意味着什么呢，意味着我们可以绕湖走一圈走出一个环，而有环就可以无限走，就可以散步了！</p>
+<p>晚饭时间第一次见到 n1 的队员，非常社恐，只认识
+shino，只能吃吃吃。有道北京特色菜，芥末白菜，非常的好，希望大家有机会都尝试一下
+(x。</p>
+<p>和 hash_hash 住一间，晚上打了 miniL，把 crypto ak 了。跟 hash_hash
+讨论了一下题，学到许多，果然 n1 学长是真的强。</p>
+<h3 id="day-1">day 1</h3>
+<p>五月四日，早上八点开题，这次赛制对我来说也是第一次见，有 hot
+challenge 部分，就是在一个题有一血之后才放开下一个题；还有一个 live ctf
+部分，在固定时间放出一道题，分数按时间递减，从一血出现是开始计算。</p>
+<p>虽然但是，上来我们密码手没事干啊，好像全是 re 和 pwn
+题。躺了一上午，吃午饭（外卖真好吃）。</p>
+<p>下午又枯坐 3 h，突然来了个消息，说晚上 9 点第一场 live 是
+crpyto，好评！但我又发现在这之前真没事，就润去北大了。见到老同学还是很激动的，听他们聊天，发现都在理财，真的很厉害！</p>
+<p>北大有好几个湖，也可以有环无限走，非常地羡慕。</p>
+<p>tp
+景色风格感觉很体现学校风格。清华都是些大路，或者说是比较方正的那种；北大很多幽静的小路，也有很多比较古老的建筑。</p>
+<p>晚上回来打
+live，呃，怎么说呢，这个密码有点，太，大家都一眼秒了。唉，10 min
+不到就下班了。</p>
+<h3 id="day-2">day 2</h3>
+<p>真躺尸吧。中途有个题有密码部分，但好像也是一个碰撞就能解决的。感觉我根本没有用，来北京真旅游了。</p>
+<h3 id="day-3">day 3</h3>
+<p>早上起来一看，大爹们打到了
+rk4，真强啊。深感自己的无力，回去要狠狠学习二进制！</p>
+<p>然后就回成都了，感觉首都机场不如天府，安检挺慢的，饮水机也很稀有的样子。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CTF/" rel="tag"># CTF</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/05/15/SHC2024-part-of-crypto/" rel="prev" title="SHC2024 part of crypto">
+                  <i class="fa fa-angle-left"></i> SHC2024 part of crypto
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/05/21/%E9%BE%99%E5%B9%B4%E8%AF%BB%E9%BE%99%E4%B9%A6/" rel="next" title="龙年读龙书——如何学习编译原理（一）">
+                  龙年读龙书——如何学习编译原理（一） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">leukocyte</span>
+  </div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha256-tc4b48P1MPGS4PJXHRlChGCW1mEZy62jS/3JEsSHPzU=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
